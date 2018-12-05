@@ -6,7 +6,7 @@ package com.lifeinfinity.company.multiplythread.threadcreatemode01;
  * @author: Mr.Zhang
  * @create: 2018-11-29 21:50
  **/
-public class FirstThread extends Thread {
+public class FirstModeThread extends Thread {
     private int i;
 
     @Override
@@ -28,9 +28,9 @@ public class FirstThread extends Thread {
             System.out.println(Thread.currentThread().getName()+" "+i);
             if (i == 20) {
                 //创建并启动第一个线程
-                new FirstThread().start();
+                new FirstModeThread().start();
                 //创建并启动第二个线程
-                new FirstThread().start();
+                new FirstModeThread().start();
             }
         }
     }
