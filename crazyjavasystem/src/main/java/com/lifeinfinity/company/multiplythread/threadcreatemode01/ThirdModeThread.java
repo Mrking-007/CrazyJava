@@ -1,6 +1,5 @@
 package com.lifeinfinity.company.multiplythread.threadcreatemode01;
 
-import javax.swing.plaf.TreeUI;
 import java.util.concurrent.*;
 
 /**
@@ -15,7 +14,7 @@ import java.util.concurrent.*;
  * @Date: Created on 2018/12/2
  * @Modified By:
  */
-public class ThreadModeThread implements Callable<Integer> {
+public class ThirdModeThread implements Callable<Integer> {
     private int i;
     private int sum;
 
@@ -30,7 +29,7 @@ public class ThreadModeThread implements Callable<Integer> {
     }
 
     public static void main(String[] args) {
-        Callable<Integer> callable = new ThreadModeThread();
+        Callable<Integer> callable = new ThirdModeThread();
         FutureTask<Integer> futureTask = new FutureTask<Integer>(callable);
         //到这里本质仍是第二种模式，使用runnable对象作为target创建thread
         new Thread(futureTask, "新线程1").start();
