@@ -24,6 +24,30 @@ public class ThreeModeSummary {
        FutureTask<Integer> futureTask = new FutureTask<Integer>(callable);
        //到这里本质仍是第二种模式，使用runnable对象作为target创建thread
        new Thread(futureTask, "新线程1").start();
+       对于2、3可以共用thread-target对象时，依据实验必须对target对象run、call方法进行线程安全控制，否则无法保证线程安全
     * */
 
+    /* 下方的类，虽然共享target对象，但是做不到线程安全
+    * public class HelloThread implements Runnable {
+
+    private int ticket = 5;
+
+    @Override
+    public void run() {
+        while (true) {
+            System.out.println(Thread.currentThread().getName() + (ticket--));
+            if (ticket < 1) {
+                break;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        HelloThread t = new HelloThread();
+        Thread thread1 = new Thread(t, "1号窗口");
+        thread1.start();
+        Thread thread2 = new Thread(t, "2号窗口");
+        thread2.start();
+    }
+}*/
 }
