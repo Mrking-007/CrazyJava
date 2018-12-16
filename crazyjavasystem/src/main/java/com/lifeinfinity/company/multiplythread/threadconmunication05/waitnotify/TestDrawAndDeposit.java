@@ -6,7 +6,7 @@ package com.lifeinfinity.company.multiplythread.threadconmunication05.waitnotify
  * @Date: Created on 2018/12/13
  * @Modified By:
  */
-public class TestDrawAndDeposit {
+public class  TestDrawAndDeposit {
     public static void main(String[] args) {
         Account account = new Account();
         DepositThread depositThread1 = new DepositThread(account, 1000, "存线程1");

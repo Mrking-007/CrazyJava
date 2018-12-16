@@ -2,7 +2,7 @@ package com.lifeinfinity.company.multiplythread.threadconmunication05.waitnotify
 
 /**
  * @Created By: zhangyuhang@gridsum.com
- * @Description:
+ * @Description: 参见https://blog.csdn.net/xlgen157387/article/details/78197583
  * @Date: Created on 2018/12/13
  * @Modified By:
  */
