@@ -15,6 +15,5 @@ public class BlockingQueueTest {
         bq.put("java");//与bq.add("java"),bq.offer("java")相同
         bq.put("java");//与bq.add("java"),bq.offer("java")相同
         bq.put("java");//阻塞线程、bq.add("java")引发异常、bq.offer("java")返回false，元素不会放到队列中
-        Thread.State state=Thread.currentThread().getState();
     }
 }
