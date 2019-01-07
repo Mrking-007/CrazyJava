@@ -19,7 +19,7 @@ public class ThreadPool {
     ThreadPool、ThreadPoolExecutor
     http://www.cnblogs.com/baizhanshi/p/5469948.html
     https://www.jianshu.com/p/d2729853c4da?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
-    http://www.cnblogs.com/dolphin0520/p/3932921.html
+    http://www.cnblogs.com/dolphin0520/p/3932921.html 源码解析
     https://www.jianshu.com/p/135c89001b61
     http://www.cnblogs.com/zhujiabin/p/5404771.html
     http://www.cnblogs.com/kuoAT/p/6714762.html
@@ -30,6 +30,8 @@ public class ThreadPool {
     https://blog.csdn.net/qq_25224749/article/details/81146556
     https://www.cnblogs.com/zjfjava/p/8505606.html
     https://www.jianshu.com/p/de025df55363
+    https://www.jianshu.com/p/f777abb7b251
+    https://www.cnblogs.com/shijiaqi1066/p/4631466.html
     http://blog.dyngr.com/blog/2016/09/15/java-forkjoinpool-internals/
     http://gee.cs.oswego.edu/dl/papers/fj.pdf  http://ifeve.com/doug-lea/  http://www.importnew.com/5575.html
 
@@ -82,7 +84,7 @@ public class ThreadPool {
 　　我们尽量优先使用Executors提供的静态方法来创建线程池，如果Executors提供的方法无法满足要求，再自己通过ThreadPoolExecutor类来创建线程池。
 
     Java8新增的两个静态方法，内部使用new ForkJoinPool(int parallelism, ForkJoinWorkerThreadFactory factory, UncaughtExceptionHandler handler,boolean asyncMode)
-    6)ExecutorService newWorkStealingPool(int parallelism);创建持有足够的线程的线程池来支持给定的并行级别，该方法还有使用多个对垒来减少竞争。
+    6)ExecutorService newWorkStealingPool(int parallelism);创建持有足够的线程的线程池来支持给定的并行级别，该方法还有使用多个队列来减少竞争。
     7)ExecutorService newWorkStealingPool();是上一个方法的简化版本，当前机器有4个CPU，则并行级别设置为4
 
 
