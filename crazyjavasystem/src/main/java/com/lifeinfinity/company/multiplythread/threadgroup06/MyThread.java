@@ -1,4 +1,4 @@
-package com.lifeinfinity.company.multiplythread.threadexception07;
+package com.lifeinfinity.company.multiplythread.threadgroup06;
 
 /**
  * @program: crazyjavasystem
