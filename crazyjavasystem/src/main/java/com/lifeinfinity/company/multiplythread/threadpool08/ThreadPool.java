@@ -17,6 +17,7 @@ public class ThreadPool {
     /*
     参见：
     ThreadPool、ThreadPoolExecutor
+    https://www.cnblogs.com/wihainan/p/4765862.html
     http://www.cnblogs.com/baizhanshi/p/5469948.html
     https://www.jianshu.com/p/d2729853c4da?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
     http://www.cnblogs.com/dolphin0520/p/3932921.html 源码解析
@@ -25,6 +26,16 @@ public class ThreadPool {
     http://www.cnblogs.com/kuoAT/p/6714762.html
     https://blog.csdn.net/M_Jack/article/details/83041729
     https://www.cnblogs.com/kuoAT/p/6714080.html
+    https://blog.csdn.net/m0_37125796/article/details/81105099 java主线程等待所有子线程执行完毕再执行
+    https://stackoverflow.com/questions/1250643/how-to-wait-for-all-threads-to-finish-using-executorservice?rq=1
+    https://www.zhihu.com/question/23212914
+    //https://www.baeldung.com/java-executor-service-tutorial 最佳实践
+    https://blog.csdn.net/w1014074794/article/details/51098871 invokeAll、invokeAny
+
+    https://stackoverflow.com/questions/11520189/difference-between-shutdown-and-shutdownnow-of-executor-service  shutdown和shutdownnow区别
+    https://www.jianshu.com/p/b5e2283e869c shutdown
+
+
 
     ForkJoinPool
     https://blog.csdn.net/qq_25224749/article/details/81146556

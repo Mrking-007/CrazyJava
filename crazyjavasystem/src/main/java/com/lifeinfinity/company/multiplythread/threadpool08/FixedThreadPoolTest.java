@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
  * @Description:
  * @Date: Created on 2019/1/6
  */
-public class ThreadPoolTest
+public class FixedThreadPoolTest
 {
     public static void main(String[] args) {
         //创建一个具有固定线程数的线程

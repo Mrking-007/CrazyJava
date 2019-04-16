@@ -11,12 +11,12 @@ import java.util.concurrent.TimeUnit;
  * https://blog.csdn.net/wo541075754/article/details/51564359
  * @Date: Created on 2019/1/6
  */
-public class PrintTask extends RecursiveAction {
+public class ForkJoinPollPrintTaskTest extends RecursiveAction {
     private static final int THREHOLD = 50;
     private int start;
     private int end;
 
-    public PrintTask(int start,int end){
+    public ForkJoinPollPrintTaskTest(int start, int end){
         this.start=start;
         this.end=end;
     }
@@ -33,8 +33,8 @@ public class PrintTask extends RecursiveAction {
         }else{
             //当end与start之间的差大于THRESHOD，即要打印的数超过50个时，将大任务分解成两个小任务
             int middle=(start+end)/2;
-            PrintTask left=new PrintTask(start,middle);
-            PrintTask right=new PrintTask(middle,end);
+            ForkJoinPollPrintTaskTest left=new ForkJoinPollPrintTaskTest(start,middle);
+            ForkJoinPollPrintTaskTest right=new ForkJoinPollPrintTaskTest(middle,end);
             //并行执行两个小任务
             left.fork();
             right.fork();
@@ -43,7 +43,7 @@ public class PrintTask extends RecursiveAction {
 
     public static void main(String[] args) throws InterruptedException {
         ForkJoinPool forkJoinPool=new ForkJoinPool();
-        forkJoinPool.submit(new PrintTask(0,300));
+        forkJoinPool.submit(new ForkJoinPollPrintTaskTest(0,300));
         forkJoinPool.awaitTermination(2, TimeUnit.SECONDS);
         forkJoinPool.shutdown();
         System.out.println("线程池是否关闭："+forkJoinPool.isShutdown());

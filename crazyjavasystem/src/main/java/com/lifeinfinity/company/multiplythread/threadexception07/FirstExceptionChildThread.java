@@ -4,7 +4,7 @@ package com.lifeinfinity.company.multiplythread.threadexception07;
  * @program: crazyjavasystem
  * @description:
  * 背景：多线程运行不能按照顺序执行过程中捕获异常的方式来处理异常，异常会被直接抛出到控制台（由于线程的本质，使得你不能捕获从线程中逃逸的异常。
- * 一旦异常逃逸出任务的run方法，它就   会向外传播到控制台，除非你采用特殊的形式捕获这种异常。），这样会让你很头疼，无法捕捉到异常就无法处理异常而引发的问题。
+ * 一旦异常逃逸出任务的run方法，它就会向外传播到控制台，除非你采用特殊的形式捕获这种异常。），这样会让你很头疼，无法捕捉到异常就无法处理异常而引发的问题。
  *
  * 设计：在java多线程程序中，所有线程都不允许抛出未捕获的checked exception（比如sleep时的InterruptedException），也就是说各个线程需要自己把自己的checked exception处理掉。
  * 这一点是通过java.lang.Runnable.run()方法声明(因为此方法声明上没有throw exception部分)进行了约束。
